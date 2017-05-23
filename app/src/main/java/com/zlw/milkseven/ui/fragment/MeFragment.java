@@ -142,7 +142,7 @@ public class MeFragment extends BaseFragment {
     private void showAppInfo() {
         AlertDialog.Builder builer = new AlertDialog.Builder(getActivity())
                 .setTitle("关于我们")
-                .setMessage("开发人:WinFred\n地址:https://github.com/Winfred1989/Six")
+                .setMessage("开发人:WinFred\n地址:https://github.com/zlw1347822194/MilkSeven")
                 .setPositiveButton("确定", null);
         builer.create().show();
     }
