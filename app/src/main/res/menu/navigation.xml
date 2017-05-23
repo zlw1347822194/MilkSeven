@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_24dp"
+        android:title="@string/title_home" />
+
+
+
+    <item
+        android:id="@+id/navigation_journalism"
+        android:icon="@drawable/ic_journalism_24dp"
+        android:title="@string/title_journalism" />
+
+    <item
+        android:id="@+id/navigation_joke"
+        android:icon="@drawable/ic_joke_24dp"
+        android:title="@string/title_joke" />
+
+    <item
+        android:id="@+id/navigation_me"
+        android:icon="@drawable/ic_me_24dp"
+        android:title="@string/title_me" />
+
+</menu>

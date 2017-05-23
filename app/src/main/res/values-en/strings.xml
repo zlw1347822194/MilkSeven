@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">牛奶七</string>
+    <string name="title_home">主页</string>
+    <string name="title_me">我</string>
+    <string name="title_joke">笑话</string>
+    <string name="title_journalism">新闻</string>
+
+    <string name="second_title">牛奶七</string>
+    <string name="login_et_name">账号</string>
+    <string name="login_tv_register">新用户注册</string>
+    <string name="forget_password">忘记密码</string>
+    <string name="setting">设置</string>
+    <string name="checkinfo">请完善您的信息！</string>
+    <string name="update_userinfo_success">更新用户信息成功:</string>
+    <string name="update_userinfo_failed">更新用户信息失败:</string>
+    <string name="digits_number_letter">0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="select_age">选择年龄</string>
+    <string name="select_city">城市选择</string>
+    <string name="select_sex">选择性别</string>
+    <string name="select_pic_failed">选择图片失败！</string>
+    <string name="upload_photo_success">上传成功</string>
+    <string name="upload_failed">上传文件失败：</string>
+    <string name="more_info">完善个人信息</string>
+
+    <string name="auto_login_failed">自动登录失败</string>
+    <string name="auto_login_third_failed">第三方自动登录失败:</string>
+    <drawable name="clr_normal">#ff6501</drawable>
+    <drawable name="clr_pressed">#a44100</drawable>
+
+</resources>
