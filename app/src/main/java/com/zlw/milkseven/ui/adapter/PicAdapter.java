@@ -64,47 +64,6 @@ public class PicAdapter extends BaseAdapter {
                 .into(holder.img_pic);
         holder.tv_pic.setText(data.get(position).getTitle());
 
-        convertView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                new AlertDialog.Builder(parent.getContext())
-                        .setTitle("收藏")
-                        .setMessage("是否收藏？")
-                        .setPositiveButton("收藏", new  DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-//                                CollectionBean collectionBeans = new CollectionBean();
-//                                collectionBeans = BmobUser.getCurrentUser(parent.getContext(),CollectionBean.class);
-                                Account account = BmobUser.getCurrentUser(BaseApplication.getInstance(),Account.class);
-                                if(account != null) {
-                                    CollectionBean collectionBean = new CollectionBean();
-                                    collectionBean.setPicUrl(data.get(position).getPicUrl());
-                                    collectionBean.setuId(account.getObjectId());
-                                    collectionBean.setUrl(data.get(position).getUrl());
-                                    collectionBean.setTitle(data.get(position).getTitle());
-                                    collectionBean.setType(Constant.COLLECTION_TYPE_PIC);
-                                    collectionBean.save(parent.getContext(), new SaveListener() {
-                                        @Override
-                                        public void onSuccess() {
-                                            Toast.makeText(parent.getContext(), "收藏成功", Toast.LENGTH_SHORT).show();
-                                        }
-
-                                        @Override
-                                        public void onFailure(int i, String s) {
-                                            Toast.makeText(parent.getContext(), "收藏失败", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
-                                }
-                            }
-                        })
-                        .setNegativeButton("取消",null)
-                        .create()
-                        .show();
-
-                return false;
-            }
-        });
-
         return convertView;
     }
 

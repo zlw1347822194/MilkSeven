@@ -61,43 +61,7 @@ public class JokeAdapter extends BaseAdapter {
 
         holder.tv_joke.setText(data.get(position).getContent());
 
-        convertView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                new AlertDialog.Builder(parent.getContext())
-                        .setTitle("收藏")
-                        .setMessage("是否收藏？")
-                        .setPositiveButton("收藏", new  DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Account account = BmobUser.getCurrentUser(BaseApplication.getInstance(),Account.class);
-                                if(account != null){
-                                CollectionBean collectionBean = new CollectionBean();
-//                collectionBean.setPicUrl();
-                                    collectionBean.setuId(account.getObjectId());
-                                collectionBean.setTitle(data.get(position).getContent());
-                                collectionBean.setType(Constant.COLLECTION_TYPE_JOKE);
-                                collectionBean.save(parent.getContext(), new SaveListener() {
-                                    @Override
-                                    public void onSuccess() {
-                                        Toast.makeText(parent.getContext(),"收藏成功",Toast.LENGTH_SHORT).show();
-                                    }
 
-                                    @Override
-                                    public void onFailure(int i, String s) {
-                                        Toast.makeText(parent.getContext(),"收藏失败",Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                                }
-                            }
-                        })
-                        .setNegativeButton("取消",null)
-                        .create()
-                        .show();
-
-                return false;
-            }
-        });
         return convertView;
     }
 

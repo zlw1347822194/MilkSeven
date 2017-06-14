@@ -69,7 +69,7 @@ public class CollectionActivity extends AppCompatActivity {
             startActivity(intent);
         }else {
             query.addWhereEqualTo("uId", account.getObjectId());
-            query.setLimit(6);
+            query.setLimit(100);
 //执行查询方法
             query.findObjects(this, new FindListener<CollectionBean>() {
                 @Override
